@@ -6,7 +6,7 @@ public:
         {
             mp.insert(nums[i]);
         }
-        for(int i = 1; i <= nums.size() + 1; i++) 
+        for(int i=1;i<=nums.size()+1;i++) 
         {
             if(mp.count(i) == 0)
             return i;
