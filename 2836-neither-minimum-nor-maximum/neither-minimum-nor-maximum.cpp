@@ -1,18 +1,16 @@
 class Solution {
 public:
     int findNonMinOrMax(vector<int>& nums) {
-        set<int>mp;
-        for(int i=0;i<nums.size();i++)
-        {
-            mp.insert(nums[i]);
-        }
-        vector<int> ans(mp.begin(),mp.end());
-        if(ans.size() < 3) 
-        {
-            return -1;
+        int mn = *min_element(nums.begin(), nums.end());
+        int mx = *max_element(nums.begin(), nums.end());
+
+        for(int x : nums) {
+            if(x != mn && x != mx) {
+                return x;
+            }
         }
 
-        return ans[ans.size()-2];
+        return -1;
         
     }
 };
