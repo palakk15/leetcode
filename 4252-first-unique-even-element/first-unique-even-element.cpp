@@ -2,7 +2,7 @@ class Solution {
 public:
     int firstUniqueEven(vector<int>& nums) {
         unordered_map<int,int>mp;
-        mp.reserve(nums.size());
+
         for(int i=0;i<nums.size();i++)
         {
             mp[nums[i]]++;
